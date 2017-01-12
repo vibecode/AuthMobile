@@ -22,8 +22,8 @@ export const Input = ({value, onChangeText, placeholder, secureTextEntry}) => {
 const styles = {
   inputStyle: {
     color: '#000',
-    paddingRight: 5,
-    paddingLeft: 5,
+    paddingRight: 6,
+    paddingLeft: 6,
     fontSize: 18,
     lineHeight: 23,
     flex: 1

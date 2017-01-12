@@ -19,7 +19,7 @@ class LoginForm extends Component {
         <Card>
           <CardSection>
               <Input
-                  placeholder="Email"
+                  placeholder="Email Address"
                   value={this.state.email}
                   onChangeText={(inputValue) => {
                     this.setState({email: inputValue})
@@ -38,11 +38,7 @@ class LoginForm extends Component {
             />
           </CardSection>
 
-          <CardSection>
-              <Button onPress={this.onButtonPress.bind(this)}>
-                LOG IN
-              </Button>
-          </CardSection>
+          <Button title='LOG IN' onPress={this.onButtonPress.bind(this)}>Log In</Button>
         </Card>
     )
   }

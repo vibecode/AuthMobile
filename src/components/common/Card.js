@@ -11,20 +11,19 @@ export const Card = (props) => {
 
 const styles = {
   containerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
+    borderRadius: 6,
     borderColor: '#ddd',
-    borderBottomWidth: 0,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 16
     },
     shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10
+    shadowRadius: 6,
+    elevation: 2,
+    padding: 16,
+    marginLeft: 8,
+    marginRight: 8,
+    marginTop: 12,
   }
 };
