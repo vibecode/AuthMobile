@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Header, Button, Spinner } from './components/common';
-import Firebase from 'firebase';
 import LoginForm from './components/LoginForm';
+import Firebase from 'firebase';
+import firebaseInit from './firebaseInit';
 
 class App extends Component {
   state = {
@@ -10,13 +11,8 @@ class App extends Component {
   };
 
   componentWillMount() {
-    Firebase.initializeApp({
-      apiKey: 'AIzaSyBmKu55SGQCgDaip20oxwNYilm4NCxjZbw',
-      authDomain: 'authmobile-442b8.firebaseapp.com',
-      databaseURL: 'https://authmobile-442b8.firebaseio.com',
-      storageBucket: 'authmobile-442b8.appspot.com',
-      messagingSenderId: '742330710970'
-    });
+    //firebaseInit param is an object that contains your Firebase credentials, you should pass your own here.
+    Firebase.initializeApp(firebaseInit);
 
     Firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -36,7 +32,10 @@ class App extends Component {
         return <LoginForm />;
 
       default:
-        return <View style={spinnerContainerStyle}><Spinner /></View>
+        return (
+            <View style={spinnerContainerStyle}>
+              <Spinner />
+            </View>)
     }
   }
 
