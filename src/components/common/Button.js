@@ -14,14 +14,12 @@ export const Button = ({onPress, children}) => {
 
 const styles = {
   textStyle: {
-    alignSelf: 'center',
+    textAlign:'center',
     color: '#007aff',
     fontWeight: '600',
-    paddingTop: 16,
-    paddingBottom: 16
+    padding: 16
   },
   buttonStyle: {
-    minHeight: 40,
     alignSelf: 'stretch',
     backgroundColor: '#fff',
     borderRadius: 6,
