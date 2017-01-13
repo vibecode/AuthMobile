@@ -29,4 +29,3 @@ const styles = {
     borderColor: '#007aff'
   }
 };
-
