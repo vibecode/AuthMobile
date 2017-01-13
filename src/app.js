@@ -30,12 +30,18 @@ class App extends Component {
   renderContent() {
     switch (this.state.loggedIn) {
       case true:
-        return <Button>Log Out</Button>;
+        return <Button onPress={this.onSignOut.bind(this)}>Log Out</Button>;
+
       case false:
         return <LoginForm />;
+
       default:
         return <View style={spinnerContainerStyle}><Spinner /></View>
     }
+  }
+
+  onSignOut() {
+    Firebase.auth().signOut();
   }
 
   render() {
@@ -61,8 +67,8 @@ const styles = {
   spinnerContainerStyle: {
     padding: 16,
     flex: 1,
-    alignItems:'center',
-    justifyContent:'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 };
 
