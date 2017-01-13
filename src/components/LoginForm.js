@@ -4,12 +4,16 @@ import { Button, Card, CardSection, Input, Spinner } from './common';
 import Firebase from 'firebase';
 
 class LoginForm extends Component {
-  state = {
-    email: '',
-    password: '',
-    error: '',
-    loading: false
-  };
+  constructor() {
+    super();
+    this.state = {
+      email: '',
+      password: '',
+      error: '',
+      loading: false
+    };
+    this.onButtonPress = this.onButtonPress.bind(this);
+  }
 
   onButtonPress() {
     const {email, password} = this.state;
@@ -46,7 +50,7 @@ class LoginForm extends Component {
     }
 
     return (
-        <Button title='login' onPress={this.onButtonPress.bind(this)}>Log In</Button>
+        <Button title='login' onPress={this.onButtonPress}>Log In</Button>
     )
   }
 

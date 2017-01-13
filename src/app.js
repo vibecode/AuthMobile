@@ -6,9 +6,13 @@ import Firebase from 'firebase';
 import firebaseInit from './firebaseInit';
 
 class App extends Component {
-  state = {
-    loggedIn: null
-  };
+  constructor() {
+    super();
+    this.state = {
+      loggedIn: null
+    };
+    this.onSignOut = this.onSignOut.bind(this);
+  }
 
   componentWillMount() {
     //firebaseInit param is an object that contains your Firebase credentials, you should pass your own here.
@@ -26,7 +30,7 @@ class App extends Component {
   renderContent() {
     switch (this.state.loggedIn) {
       case true:
-        return <Button onPress={this.onSignOut.bind(this)}>Log Out</Button>;
+        return <Button onPress={this.onSignOut}>Log Out</Button>;
 
       case false:
         return <LoginForm />;
