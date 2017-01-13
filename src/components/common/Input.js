@@ -9,8 +9,9 @@ export const Input = ({value, onChangeText, placeholder, secureTextEntry}) => {
         <TextInput
             style={inputStyle}
             secureTextEntry={secureTextEntry}
-            underlineColorAndroid="transparent"
             placeholder={placeholder}
+            underlineColorAndroid="transparent"
+            placeholderTextColor="#ddd"
             autoCorrect={false}
             value={value}
             onChangeText={onChangeText}
@@ -21,7 +22,7 @@ export const Input = ({value, onChangeText, placeholder, secureTextEntry}) => {
 
 const styles = {
   inputStyle: {
-    color: '#000',
+    color: '#007aff',
     paddingRight: 6,
     paddingLeft: 6,
     fontSize: 18,

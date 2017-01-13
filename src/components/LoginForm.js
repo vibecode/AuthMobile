@@ -35,7 +35,7 @@ class LoginForm extends Component {
 
   onLoginFail() {
     this.setState({
-      error: 'Authentication Failed',
+      error: 'Wrong email or password',
       loading: false
     })
   }
@@ -85,7 +85,8 @@ class LoginForm extends Component {
 
 const styles = {
   errorTextStyle: {
-    fontSize: 22,
+    fontSize: 18,
+    paddingBottom: 18,
     alignSelf: 'center',
     color: 'red'
   }
