@@ -1,4 +1,4 @@
 #AuthMobile
-Basic Firebase mobile authentication setup using React Native.
+Basic Firebase mobile authentication using React Native.
 
 Run `yarn install` to install the dependencies.
